@@ -11,6 +11,17 @@ public class Word {
         return this.word;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Word) {
+            Word otherWord = (Word) obj;
+
+            return this.word.equals(otherWord.word);
+        }
+
+        return false;
+    }
+
     public String toString() {
         return this.word;
     }

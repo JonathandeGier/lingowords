@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface WordSource {
 
-    public List<Word> importWords();
+    List<Word> importWords();
 }

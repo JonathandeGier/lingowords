@@ -35,18 +35,13 @@ public class WordProcessor {
         }
 
         this.words = checkedWords;
-
-        for (Word word : this.words) {
-            System.out.println(word);
-        }
-        System.out.println(this.words.size());
     }
 
     public void storeWords() {
-        // TODO: 1-5-2020
+        wordTarget.storeWords(this.words);
     }
 
-    public String getString() {
-        return "Hello from Processor";
+    public List<Word> getWords() {
+        return words;
     }
 }
