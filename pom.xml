@@ -11,9 +11,9 @@
 
     <distributionManagement>
         <repository>
-            <id>github</id>
-            <name>BEP LingoWords</name>
-            <url>https://maven.pkg.github.com/JonathandeGier/lingowords</url>
+            <id>${env.DISTRIBUTION_ID}</id>
+            <name>${env.DISTRIBUTION_NAME}</name>
+            <url>${env.DISTRIBUTION_URL}</url>
         </repository>
     </distributionManagement>
 
