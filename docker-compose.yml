@@ -1,0 +1,22 @@
+version: "3.7"
+
+services:
+  words_db:
+    image: postgres:12
+    ports:
+      - "54321:5432"
+    networks:
+      - words_db
+    volumes:
+      - "words_db:/data/postgres"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-dev}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dev}
+      POSTGRES_DB: ${POSTGRES_DB:-lingowords}
+
+networks:
+  words_db:
+    driver: bridge
+
+volumes:
+  words_db:
