@@ -19,6 +19,4 @@ public class CommandLine implements CommandLineRunner {
         wordApplication.checkwords();
         wordApplication.storeWords();
     }
-
-
 }
