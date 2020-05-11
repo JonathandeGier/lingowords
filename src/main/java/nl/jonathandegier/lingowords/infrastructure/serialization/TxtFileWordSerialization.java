@@ -20,8 +20,6 @@ public class TxtFileWordSerialization implements FileWordDeserializer {
             while ((line = br.readLine()) != null) {
                 words.add(new Word(line));
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
