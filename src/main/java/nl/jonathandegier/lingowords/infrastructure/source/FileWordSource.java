@@ -10,15 +10,17 @@ import java.util.List;
 public class FileWordSource implements WordSource {
 
     private FileWordDeserializer deserializer;
+    private String fileSource;
 
-    public FileWordSource(FileWordDeserializer deserializer) {
+    public FileWordSource(FileWordDeserializer deserializer, String fileSource) {
         this.deserializer = deserializer;
+        this.fileSource = fileSource;
     }
 
     public List<Word> importWords() {
         ClassLoader classLoader = getClass().getClassLoader();
 
-        URL resource = classLoader.getResource("words.txt");
+        URL resource = classLoader.getResource(this.fileSource);
         if (resource == null) {
             throw new IllegalArgumentException("file is not found!");
         }

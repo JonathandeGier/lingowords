@@ -8,6 +8,7 @@ import nl.jonathandegier.lingowords.infrastructure.serialization.TxtFileWordSeri
 import nl.jonathandegier.lingowords.infrastructure.source.FileWordDeserializer;
 import nl.jonathandegier.lingowords.infrastructure.source.FileWordSource;
 import nl.jonathandegier.lingowords.infrastructure.target.DatabaseWordTarget;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -16,9 +17,12 @@ import javax.persistence.EntityManager;
 @Configuration
 public class AppConfig {
 
+    @Value("${app.filesource}")
+    private String fileSource;
+
     @Bean
     public WordSource wordSource(FileWordDeserializer fileDeserializer) {
-        return new FileWordSource(fileDeserializer);
+        return new FileWordSource(fileDeserializer, this.fileSource);
     }
 
     @Bean
