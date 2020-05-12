@@ -4,6 +4,7 @@ import nl.jonathandegier.lingowords.domain.Word;
 import nl.jonathandegier.lingowords.infrastructure.source.FileWordDeserializer;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import util.FileContent;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -14,22 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 @DisplayName("Test txt words deserialization")
 public class TxtFileWordsSerializationTest {
 
-    public static List<Word> testWordsTxtWordList() {
-        return new ArrayList<Word>(List.of(
-                new Word("14-jarig"),
-                new Word("broedvogeltelling"),
-                new Word("broedzorg"),
-                new Word("broei"),
-                new Word("broeibak"),
-                new Word("broeibed"),
-                new Word("broeien"),
-                new Word("Jordanier"),
-                new Word("jota"),
-                new Word("jou"),
-                new Word("jouen")
-        ));
-    }
-
     @Test
     @DisplayName("Test Deserialize")
     public void test_deserialize() {
@@ -37,7 +22,7 @@ public class TxtFileWordsSerializationTest {
 
         List<Word> words = deserializer.deserialize(getFile("testWords.txt"));
 
-        assertEquals(testWordsTxtWordList(), words);
+        assertEquals(FileContent.testWordsTxtWordList(), words);
     }
 
     @Test
