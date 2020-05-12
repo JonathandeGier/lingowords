@@ -1,4 +1,4 @@
-package nl.jonathandegier.lingowords.infrastructure.database.dto;
+package nl.jonathandegier.lingowords.infrastructure.target.dto;
 
 import nl.jonathandegier.lingowords.domain.Word;
 import org.junit.jupiter.api.DisplayName;

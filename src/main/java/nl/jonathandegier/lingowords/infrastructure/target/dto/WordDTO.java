@@ -1,4 +1,4 @@
-package nl.jonathandegier.lingowords.infrastructure.database.dto;
+package nl.jonathandegier.lingowords.infrastructure.target.dto;
 
 import nl.jonathandegier.lingowords.domain.Word;
 
@@ -15,7 +15,6 @@ public class WordDTO {
     @Column(name = "length", nullable = false)
     private int length;
 
-    public WordDTO() {}
     public WordDTO(String word, int length) {
         this.word = word;
         this.length = length;

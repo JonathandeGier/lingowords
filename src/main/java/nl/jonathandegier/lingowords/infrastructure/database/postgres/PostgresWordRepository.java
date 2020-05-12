@@ -1,7 +1,7 @@
 package nl.jonathandegier.lingowords.infrastructure.database.postgres;
 
 import nl.jonathandegier.lingowords.infrastructure.target.WordRepository;
-import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
+import nl.jonathandegier.lingowords.infrastructure.target.dto.WordDTO;
 
 import javax.persistence.EntityManager;
 import javax.transaction.Transactional;

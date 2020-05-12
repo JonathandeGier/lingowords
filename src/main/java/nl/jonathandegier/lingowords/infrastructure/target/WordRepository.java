@@ -1,6 +1,6 @@
 package nl.jonathandegier.lingowords.infrastructure.target;
 
-import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
+import nl.jonathandegier.lingowords.infrastructure.target.dto.WordDTO;
 
 import java.util.List;
 
