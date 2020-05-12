@@ -34,6 +34,16 @@ jobs:
       with:
         name: build-result
         path: target
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        file: ./target/site/jacoco/jacoco.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: true
+      env:
+        CODECOV_TOKEN: bac76c2b-ac89-471c-b696-d25b6ce8510d
 
   # Package and publish jar on github packages
   package-jar:
