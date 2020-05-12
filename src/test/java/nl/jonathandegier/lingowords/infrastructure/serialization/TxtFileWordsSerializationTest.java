@@ -40,6 +40,15 @@ public class TxtFileWordsSerializationTest {
         assertEquals(testWordsTxtWordList(), words);
     }
 
+    @Test
+    @DisplayName("Test IO Exception")
+    public void test_io_exception() {
+        FileWordDeserializer deserializer = new TxtFileWordSerialization();
+
+        assertThrows(RuntimeException.class, () -> {
+            deserializer.deserialize(new File("non-existing-file.txt"));
+        });
+    }
 
     private File getFile(String path) {
         return new File(getClass().getClassLoader().getResource(path).getFile());

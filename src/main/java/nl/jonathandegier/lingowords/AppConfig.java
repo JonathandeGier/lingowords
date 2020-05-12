@@ -21,17 +21,17 @@ public class AppConfig {
     private String fileSource;
 
     @Bean
-    public WordSource wordSource(FileWordDeserializer fileDeserializer) {
+    public WordSource getwordSource(FileWordDeserializer fileDeserializer) {
         return new FileWordSource(fileDeserializer, this.fileSource);
     }
 
     @Bean
-    public FileWordDeserializer fileDeserializer() {
+    public FileWordDeserializer getfileDeserializer() {
         return new TxtFileWordSerialization();
     }
 
     @Bean
-    public WordTarget wordTarget(WordRepository wordRepository) {
+    public WordTarget getwordTarget(WordRepository wordRepository) {
         return new DatabaseWordTarget(wordRepository);
     }
 
