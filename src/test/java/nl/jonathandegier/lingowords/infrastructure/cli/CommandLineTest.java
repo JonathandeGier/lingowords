@@ -10,6 +10,7 @@ import static org.mockito.Mockito.*;
 public class CommandLineTest {
 
     @Test
+    @DisplayName("Test run")
     public void test_run() throws Exception {
         var processorMock = mock(WordProcessor.class);
 

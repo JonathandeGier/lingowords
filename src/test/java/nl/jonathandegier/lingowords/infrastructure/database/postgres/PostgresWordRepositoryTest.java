@@ -2,6 +2,7 @@ package nl.jonathandegier.lingowords.infrastructure.database.postgres;
 
 import nl.jonathandegier.lingowords.infrastructure.target.WordRepository;
 import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import javax.persistence.EntityManager;
@@ -11,6 +12,7 @@ import java.util.List;
 import static java.util.Arrays.asList;
 import static org.mockito.Mockito.*;
 
+@DisplayName("Test PostgresWordRepository")
 public class PostgresWordRepositoryTest {
 
     static List<WordDTO> wordDtos = new ArrayList<WordDTO>(
@@ -24,6 +26,7 @@ public class PostgresWordRepositoryTest {
     );
 
     @Test
+    @DisplayName("Test store Words")
     void test_store() {
 
         var entityManagerMock = mock(EntityManager.class);

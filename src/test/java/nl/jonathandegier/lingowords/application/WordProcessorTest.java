@@ -12,7 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@DisplayName("Word Processor")
+@DisplayName("Test Word Processor")
 public class WordProcessorTest {
 
     static final List<Word> rawWords = new ArrayList<Word>(

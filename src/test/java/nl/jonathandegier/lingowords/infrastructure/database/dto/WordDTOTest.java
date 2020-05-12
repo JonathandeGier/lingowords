@@ -11,6 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+@DisplayName("Test WordDTO")
 public class WordDTOTest {
 
     private static Stream<Arguments> testEqualWords() {
@@ -30,6 +31,7 @@ public class WordDTOTest {
     }
 
     @Test
+    @DisplayName("Test get word")
     void test_get_word() {
         WordDTO word = new WordDTO("word", 4);
 
@@ -37,6 +39,7 @@ public class WordDTOTest {
     }
 
     @Test
+    @DisplayName("Test get length")
     void test_get_length() {
         WordDTO word = new WordDTO("word", 4);
 

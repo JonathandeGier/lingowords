@@ -37,6 +37,7 @@ public class DatabaseWordTargetTest {
     );
 
     @Test
+    @DisplayName("Store words")
     void test_store_words() {
         var repositoryMock = mock(PostgresWordRepository.class);
 

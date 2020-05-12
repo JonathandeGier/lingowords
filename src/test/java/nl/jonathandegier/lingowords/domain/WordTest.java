@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Word domain object")
+@DisplayName("Test Word (domain object)")
 public class WordTest {
 
     private static Stream<Arguments> testEqualWords() {

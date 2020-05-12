@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
-@DisplayName("File word source")
+@DisplayName("Test File word source")
 public class FileWordSourceTest {
 
     private static Stream<Arguments> files() {
@@ -25,6 +25,7 @@ public class FileWordSourceTest {
 
     @ParameterizedTest
     @MethodSource("files")
+    @DisplayName("Test import files")
     public void test_import_file(String path) {
         var deserializer = mock(FileWordDeserializer.class);
         when(deserializer.deserialize(any(File.class))).thenReturn(new ArrayList<Word>());
@@ -37,6 +38,7 @@ public class FileWordSourceTest {
     }
 
     @Test
+    @DisplayName("Test file not found")
     public void test_import_file_not_found() {
         var deserializer = mock(FileWordDeserializer.class);
         when(deserializer.deserialize(any(File.class))).thenReturn(new ArrayList<Word>());

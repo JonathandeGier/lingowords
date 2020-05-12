@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@DisplayName("Txt words deserialization test")
+@DisplayName("Test txt words deserialization")
 public class TxtFileWordsSerializationTest {
 
     public static List<Word> testWordsTxtWordList() {
@@ -31,6 +31,7 @@ public class TxtFileWordsSerializationTest {
     }
 
     @Test
+    @DisplayName("Test Deserialize")
     public void test_deserialize() {
         FileWordDeserializer deserializer = new TxtFileWordSerialization();
 
