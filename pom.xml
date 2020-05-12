@@ -26,6 +26,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>nl.jonathandegier.lingowords.LingoWords</start-class>
+        <config-class>nl.jonathandegier.lingowords.AppConfig</config-class>
         <java.version>14</java.version>
     </properties>
 
@@ -90,11 +91,19 @@
                 <version>2.22.2</version>
             </plugin>
 
-            <!-- JaCoCo for line and branch test coverage -->
+            <!-- JaCoCo for line and branch coverage -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+
+                <configuration>
+                    <!-- Exclude Spring boot start and config classes -->
+                    <excludes>
+                        <exclude>**/AppConfig.*</exclude>
+                        <exclude>**/LingoWords.*</exclude>
+                    </excludes>
+                </configuration>
 
                 <executions>
                     <execution>
@@ -122,6 +131,11 @@
                 <configuration>
                     <timestampedReports>false</timestampedReports>
                     <mutationThreshold>90</mutationThreshold>
+                    <excludedClasses>
+                        <param>${start-class}</param>
+                        <param>${config-class}</param>
+                    </excludedClasses>
+
                 </configuration>
 
                 <dependencies>
