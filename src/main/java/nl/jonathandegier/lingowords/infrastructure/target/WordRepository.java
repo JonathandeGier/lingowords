@@ -1,4 +1,4 @@
-package nl.jonathandegier.lingowords.infrastructure.database;
+package nl.jonathandegier.lingowords.infrastructure.target;
 
 import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
 

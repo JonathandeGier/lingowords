@@ -2,7 +2,6 @@ package nl.jonathandegier.lingowords.infrastructure.target;
 
 import nl.jonathandegier.lingowords.domain.Word;
 import nl.jonathandegier.lingowords.domain.WordTarget;
-import nl.jonathandegier.lingowords.infrastructure.database.WordRepository;
 import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
 
 import java.util.ArrayList;

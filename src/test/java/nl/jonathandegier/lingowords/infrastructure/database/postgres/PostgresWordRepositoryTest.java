@@ -1,6 +1,6 @@
 package nl.jonathandegier.lingowords.infrastructure.database.postgres;
 
-import nl.jonathandegier.lingowords.infrastructure.database.WordRepository;
+import nl.jonathandegier.lingowords.infrastructure.target.WordRepository;
 import nl.jonathandegier.lingowords.infrastructure.database.dto.WordDTO;
 import org.junit.jupiter.api.Test;
 
