@@ -21,13 +21,8 @@ public class AppConfig {
     private String fileSource;
 
     @Bean
-    public WordSource getwordSource(FileWordDeserializer fileDeserializer) {
-        return new FileWordSource(fileDeserializer, this.fileSource);
-    }
-
-    @Bean
-    public FileWordDeserializer getfileDeserializer() {
-        return new TxtFileWordSerialization();
+    public WordSource getwordSource() {
+        return new FileWordSource(this.fileSource);
     }
 
     @Bean

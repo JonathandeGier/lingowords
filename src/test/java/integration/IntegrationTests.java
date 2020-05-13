@@ -29,7 +29,8 @@ public class IntegrationTests {
     private static Stream<Arguments> files() {
         return Stream.of(
                 // file path, file content, amount of good words
-                Arguments.of("testWords.txt", FileContent.testWordsTxtWordList(), 2)
+                Arguments.of("testWords.txt", FileContent.testWordsTxtWordList(), 2),
+                Arguments.of("testWords.json", FileContent.testWordsJsontWordList(), 2)
         );
     }
 
@@ -39,8 +40,7 @@ public class IntegrationTests {
     void test_import(String filePath, List<Word> expectedWordList) {
         var targetMock = mock(WordTarget.class);
 
-        FileWordDeserializer deserializer = new TxtFileWordSerialization();
-        WordSource source = new FileWordSource(deserializer, filePath);
+        WordSource source = new FileWordSource(filePath);
         WordProcessor processor = new WordProcessor(source, targetMock);
 
         processor.importWords();
@@ -76,8 +76,7 @@ public class IntegrationTests {
         WordRepository repository = new PostgresWordRepository(entityManagerMock);
         WordTarget target = new DatabaseWordTarget(repository);
 
-        FileWordDeserializer deserializer = new TxtFileWordSerialization();
-        WordSource source = new FileWordSource(deserializer, filePath);
+        WordSource source = new FileWordSource(filePath);
         WordProcessor processor = new WordProcessor(source, target);
 
         processor.importWords();
