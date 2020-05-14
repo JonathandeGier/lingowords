@@ -15,7 +15,7 @@ public class JsonFileWordSerialization implements FileWordDeserializer {
 
     @Override
     public List<Word> deserialize(File file) {
-        List<Word> words = new ArrayList<Word>();
+        List<Word> words = new ArrayList<>();
 
         try {
             String[] stringWords = gson.fromJson(new FileReader(file), String[].class);
@@ -25,7 +25,7 @@ public class JsonFileWordSerialization implements FileWordDeserializer {
             }
 
         } catch (Exception e) {
-            throw new RuntimeException("Could not deserialize json file");
+            throw new SerializationException("Could not deserialize json file");
         }
 
         return words;

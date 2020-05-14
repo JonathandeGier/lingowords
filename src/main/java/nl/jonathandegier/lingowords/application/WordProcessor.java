@@ -26,7 +26,7 @@ public class WordProcessor {
     }
 
     public void checkwords() {
-        List<Word> checkedWords = new ArrayList<Word>();
+        List<Word> checkedWords = new ArrayList<>();
 
         for (Word word : this.words) {
             if (word.getWord().matches("^[a-z]{5,7}$")) {

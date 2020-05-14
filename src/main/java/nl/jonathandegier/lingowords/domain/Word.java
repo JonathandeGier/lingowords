@@ -3,14 +3,14 @@ package nl.jonathandegier.lingowords.domain;
 public class Word {
     private static final int hashBase = 1652387;
 
-    private String word;
+    private String lingoWord;
 
     public Word(String word) {
-        this.word = word;
+        this.lingoWord = word;
     }
 
     public String getWord() {
-        return this.word;
+        return this.lingoWord;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Word {
         if (obj instanceof Word) {
             Word otherWord = (Word) obj;
 
-            return this.word.equals(otherWord.word);
+            return this.lingoWord.equals(otherWord.lingoWord);
         }
 
         return false;
@@ -26,10 +26,10 @@ public class Word {
 
     @Override
     public int hashCode() {
-        return hashBase + this.word.hashCode();
+        return hashBase + this.lingoWord.hashCode();
     }
 
     public String toString() {
-        return this.word;
+        return this.lingoWord;
     }
 }

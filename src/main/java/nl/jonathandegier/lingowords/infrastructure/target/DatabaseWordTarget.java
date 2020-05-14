@@ -16,7 +16,7 @@ public class DatabaseWordTarget implements WordTarget {
     }
 
     public void storeWords(List<Word> words) {
-        List<WordDTO> wordsDtoList = new ArrayList<WordDTO>();
+        List<WordDTO> wordsDtoList = new ArrayList<>();
 
         for (Word word : words) {
             wordsDtoList.add(new WordDTO(word));

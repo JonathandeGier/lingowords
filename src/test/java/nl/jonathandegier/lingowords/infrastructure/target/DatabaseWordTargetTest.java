@@ -16,7 +16,7 @@ import static org.mockito.Mockito.*;
 @DisplayName("Test Database target")
 public class DatabaseWordTargetTest {
 
-    private static List<Word> words = new ArrayList<Word>(
+    private static List<Word> words = new ArrayList<>(
             asList(
                     new Word("word"),
                     new Word("balls"),
@@ -26,7 +26,7 @@ public class DatabaseWordTargetTest {
             )
     );
 
-    private static List<WordDTO> wordDtos = new ArrayList<WordDTO>(
+    private static List<WordDTO> wordDtos = new ArrayList<>(
             asList(
                     new WordDTO("word", 4),
                     new WordDTO("balls", 5),

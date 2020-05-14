@@ -4,8 +4,6 @@ import nl.jonathandegier.lingowords.domain.WordSource;
 import nl.jonathandegier.lingowords.domain.WordTarget;
 import nl.jonathandegier.lingowords.infrastructure.target.WordRepository;
 import nl.jonathandegier.lingowords.infrastructure.database.postgres.PostgresWordRepository;
-import nl.jonathandegier.lingowords.infrastructure.serialization.TxtFileWordSerialization;
-import nl.jonathandegier.lingowords.infrastructure.source.FileWordDeserializer;
 import nl.jonathandegier.lingowords.infrastructure.source.FileWordSource;
 import nl.jonathandegier.lingowords.infrastructure.target.DatabaseWordTarget;
 import org.springframework.beans.factory.annotation.Value;

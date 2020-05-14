@@ -11,7 +11,7 @@ public class TxtFileWordSerialization implements FileWordDeserializer {
 
     @Override
     public List<Word> deserialize(File file) {
-        List<Word> words = new ArrayList<Word>();
+        List<Word> words = new ArrayList<>();
 
         try (FileReader reader = new FileReader(file);
              BufferedReader br = new BufferedReader(reader)) {
@@ -21,7 +21,7 @@ public class TxtFileWordSerialization implements FileWordDeserializer {
                 words.add(new Word(line));
             }
         } catch (IOException e) {
-            throw new RuntimeException("Something went wrong while deserializing the file");
+            throw new SerializationException("Something went wrong while deserializing the file");
         }
 
         return words;

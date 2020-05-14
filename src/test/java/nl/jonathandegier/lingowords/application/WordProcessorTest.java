@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 @DisplayName("Test Word Processor")
 public class WordProcessorTest {
 
-    static final List<Word> rawWords = new ArrayList<Word>(
+    static final List<Word> rawWords = new ArrayList<>(
             List.of(new Word("kast"),           // te kort
                     new Word("rozen"),          // goed
                     new Word("puzzel"),         // goed
@@ -34,7 +34,7 @@ public class WordProcessorTest {
             )
     );
 
-    static final List<Word> goodWords = new ArrayList<Word>(
+    static final List<Word> goodWords = new ArrayList<>(
             List.of(new Word("rozen"),
                     new Word("puzzel"),
                     new Word("opleven")

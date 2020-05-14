@@ -15,7 +15,7 @@ import static org.mockito.Mockito.*;
 @DisplayName("Test PostgresWordRepository")
 public class PostgresWordRepositoryTest {
 
-    static List<WordDTO> wordDtos = new ArrayList<WordDTO>(
+    static List<WordDTO> wordDtos = new ArrayList<>(
             asList(
                     new WordDTO("word", 4),
                     new WordDTO("balls", 5),
