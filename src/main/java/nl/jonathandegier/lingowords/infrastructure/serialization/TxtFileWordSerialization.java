@@ -13,9 +13,8 @@ public class TxtFileWordSerialization implements FileWordDeserializer {
     public List<Word> deserialize(File file) {
         List<Word> words = new ArrayList<Word>();
 
-        try {
-            FileReader reader = new FileReader(file);
-            BufferedReader br = new BufferedReader(reader);
+        try (FileReader reader = new FileReader(file);
+             BufferedReader br = new BufferedReader(reader)) {
 
             String line;
             while ((line = br.readLine()) != null) {

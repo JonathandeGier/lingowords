@@ -28,6 +28,13 @@ public class WordTest {
         assertEquals(expected, word.equals(other));
     }
 
+    @DisplayName("Test Hash Code")
+    @ParameterizedTest
+    @MethodSource("testEqualWords")
+    void test_hash_code(Word word, Object other, boolean expected) {
+        assertEquals(expected, word.hashCode() == other.hashCode());
+    }
+
     @Test
     @DisplayName("Test get word")
     void test_get_word() {

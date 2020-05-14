@@ -30,6 +30,13 @@ public class WordDTOTest {
         assertEquals(expected, word.equals(other));
     }
 
+    @DisplayName("Test Hash Code")
+    @ParameterizedTest
+    @MethodSource("testEqualWords")
+    void test_hash_code(WordDTO word, Object other, boolean expected) {
+        assertEquals(expected,  word.hashCode() == other.hashCode());
+    }
+
     @Test
     @DisplayName("Test get word")
     void test_get_word() {

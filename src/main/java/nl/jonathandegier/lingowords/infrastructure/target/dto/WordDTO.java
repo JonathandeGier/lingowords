@@ -43,4 +43,9 @@ public class WordDTO {
 
         return false;
     }
+
+    @Override
+    public int hashCode() {
+        return this.word.hashCode() + this.length;
+    }
 }

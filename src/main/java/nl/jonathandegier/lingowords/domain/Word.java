@@ -1,6 +1,8 @@
 package nl.jonathandegier.lingowords.domain;
 
 public class Word {
+    private static final int hashBase = 1652387;
+
     private String word;
 
     public Word(String word) {
@@ -20,6 +22,11 @@ public class Word {
         }
 
         return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return hashBase + this.word.hashCode();
     }
 
     public String toString() {
