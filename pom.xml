@@ -147,7 +147,7 @@
 
                 <configuration>
                     <timestampedReports>false</timestampedReports>
-                    <mutationThreshold>90</mutationThreshold>
+                    <mutationThreshold>75</mutationThreshold>
                     <excludedClasses>
                         <param>${start-class}</param>
                         <param>${config-class}</param>
