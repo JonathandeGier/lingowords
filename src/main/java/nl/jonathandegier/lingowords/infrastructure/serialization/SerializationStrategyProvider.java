@@ -12,7 +12,7 @@ public class SerializationStrategyProvider {
     private static final Map<String, FileWordDeserializer> strategies;
 
     static {
-        Map<String, FileWordDeserializer> map = new HashMap<String, FileWordDeserializer>();
+        Map<String, FileWordDeserializer> map = new HashMap<>();
         map.put("txt", new TxtFileWordSerialization());
         map.put("json", new JsonFileWordSerialization());
         strategies = Collections.unmodifiableMap(map);

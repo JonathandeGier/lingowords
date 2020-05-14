@@ -1,7 +1,7 @@
 package nl.jonathandegier.lingowords.domain;
 
 public class Word {
-    private static final int hashBase = 1652387;
+    private static final int HASH_BASE = 1652387;
 
     private String lingoWord;
 
@@ -26,7 +26,7 @@ public class Word {
 
     @Override
     public int hashCode() {
-        return hashBase + this.lingoWord.hashCode();
+        return HASH_BASE + this.lingoWord.hashCode();
     }
 
     public String toString() {
