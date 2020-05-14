@@ -31,6 +31,12 @@ jobs:
     - name: Build using Maven
       run: mvn clean package
 
+    - name: SonarCloud Scan
+      run: mvn sonar:sonar
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
     - name: Save result
       uses: actions/upload-artifact@v1
       with:
