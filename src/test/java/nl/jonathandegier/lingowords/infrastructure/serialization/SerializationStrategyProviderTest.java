@@ -12,12 +12,14 @@ public class SerializationStrategyProviderTest {
 
     @Test
     void test_get_txt_deserializer() {
+        new SerializationStrategyProvider();
         FileWordDeserializer deserializer = SerializationStrategyProvider.getDeserializer("testWords.txt");
         assertTrue(deserializer instanceof TxtFileWordSerialization);
     }
 
     @Test
     void test_get_json_deserializer() {
+        new SerializationStrategyProvider();
         FileWordDeserializer deserializer = SerializationStrategyProvider.getDeserializer("testWords.json");
         assertTrue(deserializer instanceof JsonFileWordSerialization);
     }
