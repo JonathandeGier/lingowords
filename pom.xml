@@ -147,10 +147,12 @@
 
                 <configuration>
                     <timestampedReports>false</timestampedReports>
-                    <mutationThreshold>75</mutationThreshold>
+                    <mutationThreshold>90</mutationThreshold>
                     <excludedClasses>
                         <param>${start-class}</param>
                         <param>${config-class}</param>
+                        <!-- try-with-resources generates unkillable mutants -->
+                        <param>nl.jonathandegier.lingowords.infrastructure.serialization.TxtFileWordSerialization</param>
                     </excludedClasses>
 
                 </configuration>
